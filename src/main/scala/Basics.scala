@@ -33,10 +33,15 @@ object Basics {
     while (i < 10) {}
 
     args.foreach((arg: String) => println(arg))
+    for (arg <- args) //Same as above
+      println(arg)
+
 
     //Conditions
     if (x > y) x
     else y
+
+    val a: Int = if (i == 1) x else y
 
     //Data structures
     val fish = Array("Salmon", "Bass", "Tuna") //Mutable
@@ -51,6 +56,19 @@ object Basics {
     fish6.count(fi => fi == "Salmon")
     fish6.foreach(fi => print(fi))
 
+    val numeral = Map(1 -> "I", 5 -> "V", 10 -> "X", 50 -> "L", 100 -> "C")
+
+    //Misc
+    println(f"${math.Pi}%.5f")
+
+    val f4 = "Thé vert"
+    f4.toLowerCase()
+    f4 toLowerCase() //Operator mode
+
+    //Classes
+    class Exemple(w: Int, q: Int){
+      println("Class created")
+    }
 
   }
 }
